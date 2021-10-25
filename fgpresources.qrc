@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="images">
+    <file>volumeDownlDark.png</file>
+    <file>settingsSymbol.png</file>
+    <file>volumeDownLight.png</file>
+    <file>volumeLevelDark.png</file>
+    <file>volumeLevelLight.png</file>
+    <file>buttonFowardDark.png</file>
+    <file>buttonFowardLight.png</file>
+    <file>buttonPauseDark.png</file>
+    <file>buttonPauseLight.png</file>
+    <file>buttonPlayDark.png</file>
+    <file>buttonPlayLight.png</file>
+    <file>buttonRewindDark.png</file>
+    <file>buttonRewindLight.png</file>
+    <file>buttonStopDark.png</file>
+    <file>buttonStopLight.png</file>
+    <file>fgpNewLogo.png</file>
+    <file>noCover.png</file>
+  </qresource>
+</RCC>

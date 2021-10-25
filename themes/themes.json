@@ -1,0 +1,22 @@
+{
+    "themes":[
+        {
+            "theme_name": "Default Light",
+            "file_location": "/default/default.qss",
+            "useWhiteButtons": false,
+            "decorationStyle": "Fusion"
+        },
+        {
+            "theme_name": "Default Dark",
+            "file_location": "/default/default.qss",
+            "useWhiteButtons": true,
+            "decorationStyle": "windowsvista"
+        },
+        {
+            "theme_name": "Aqua",
+            "file_location": "/aqua/aqua.qss",
+            "useWhiteButtons": false,
+            "decorationStyle": "Fusion"
+        }
+    ]
+}
