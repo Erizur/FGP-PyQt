@@ -87,21 +87,6 @@ class MusicPlayer(QMainWindow):
 
     def checkWhiteButtons(self):
         # also define sizes
-        self.ui.playButton.setMinimumSize(QSize(45, 25))
-        self.ui.playButton.setMaximumSize(QSize(45, 25))
-        self.ui.playButton.setBaseSize(QSize(55, 25))
-        self.ui.stopButton.setMinimumSize(QSize(45, 25))
-        self.ui.stopButton.setMaximumSize(QSize(45, 25))
-        self.ui.stopButton.setBaseSize(QSize(55, 25))
-        self.ui.rewindButton.setMinimumSize(QSize(45, 25))
-        self.ui.rewindButton.setMaximumSize(QSize(45, 25))
-        self.ui.rewindButton.setBaseSize(QSize(55, 25))
-        self.ui.fowardButton.setMinimumSize(QSize(45, 25))
-        self.ui.fowardButton.setMaximumSize(QSize(45, 25))
-        self.ui.fowardButton.setBaseSize(QSize(55, 25))
-        self.ui.playButton_2.setMinimumSize(QSize(25, 25))
-        self.ui.playButton_2.setMaximumSize(QSize(25, 25))
-        self.ui.playButton_2.setBaseSize(QSize(55, 25))
         useWhiteButtons = str(appSettings.value("useWhiteButtons"))
         if useWhiteButtons == "true":
             playicon = QIcon(":/images/buttonPlayDark.png")
@@ -131,6 +116,21 @@ class MusicPlayer(QMainWindow):
             self.ui.playButton.setIcon(playicon)
         else:
             self.ui.playButton.setIcon(pause)
+        self.ui.playButton.setMinimumSize(QSize(45, 25))
+        self.ui.playButton.setMaximumSize(QSize(45, 25))
+        self.ui.playButton.setBaseSize(QSize(45, 25))
+        self.ui.stopButton.setMinimumSize(QSize(45, 25))
+        self.ui.stopButton.setMaximumSize(QSize(45, 25))
+        self.ui.stopButton.setBaseSize(QSize(45, 25))
+        self.ui.rewindButton.setMinimumSize(QSize(45, 25))
+        self.ui.rewindButton.setMaximumSize(QSize(45, 25))
+        self.ui.rewindButton.setBaseSize(QSize(45, 25))
+        self.ui.fowardButton.setMinimumSize(QSize(45, 25))
+        self.ui.fowardButton.setMaximumSize(QSize(45, 25))
+        self.ui.fowardButton.setBaseSize(QSize(45, 25))
+        self.ui.playButton_2.setMinimumSize(QSize(25, 25))
+        self.ui.playButton_2.setMaximumSize(QSize(25, 25))
+        self.ui.playButton_2.setBaseSize(QSize(25, 25))
 
     def getSongMetadata(self):
         try:
