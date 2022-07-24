@@ -6,6 +6,7 @@ import sys
 import mutagen
 import argparse
 import darkdetect
+import miniaudio
 from PySide6.QtCore import QUrl, QSettings, QFileInfo, QSize
 from PySide6.QtGui import QImage, QPixmap, QIcon
 from PySide6.QtMultimedia import QMediaPlayer, QAudioOutput
@@ -66,11 +67,6 @@ class MusicPlayer(QMainWindow):
         self.ui.actionShuffle.setChecked(bool(appSettings.value("ShuffleOn")))
         self.ui.actionLoop.setChecked(bool(appSettings.value("LoopOn")))
         sSlider = self.ui.songTrackbar
-        self.mPlayer.durationChanged.connect(self.updateMaxSlider)
-        self.mPlayer.positionChanged.connect(self.updateSlider)
-        self.mPlayer.playbackStateChanged.connect(self.updateUiText)
-        self.mPlayer.metaDataChanged.connect(self.getSongMetadata)
-        self.mPlayer.mediaStatusChanged.connect(self.nextSong_Action)
         sSlider.sliderReleased.connect(self.setSliderPos)
         sSlider.sliderMoved.connect(self.onSliderMove)
         sSlider.sliderPressed.connect(self.onSliderPress)
@@ -247,6 +243,7 @@ class MusicPlayer(QMainWindow):
                 self.ui.label.setText(songMetadata)
         except MutagenError:
             print("Loading failed :(")
+            print(MutagenError)
         except KeyError:
             print("Loading failed :(")
 
